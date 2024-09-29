@@ -70,17 +70,17 @@ export const updateAlergia = (req, res) => {
       .then(num => {
         if (num == 1) {
           res.send({
-            message: "Tutorial was updated successfully."
+            message: "alergia actualizada."
           });
         } else {
           res.send({
-            message: `Cannot update Tutorial with id=${id}. Maybe Tutorial was not found or req.body is empty!`
+            message: `no pudimos actualizar la alergia con el id=${id}. talvez la alergia no exista!`
           });
         }
       })
       .catch(err => {
         res.status(500).send({
-          message: "Error updating Tutorial with id=" + id
+          message: "error actualizando la alergia con el id=" + id
         });
       });
   };
@@ -95,17 +95,17 @@ export const deleteAlergia = (req, res) => {
       .then(num => {
         if (num == 1) {
           res.send({
-            message: "Tutorial was deleted successfully!"
+            message: "alergia borrada!"
           });
         } else {
           res.send({
-            message: `Cannot delete Tutorial with id=${id}. Maybe Tutorial was not found!`
+            message: `no pudimos borrar la alergia con el id=${id}. talvez la alergia no exista!`
           });
         }
       })
       .catch(err => {
         res.status(500).send({
-          message: "Could not delete Tutorial with id=" + id
+          message: "error actualizando la alergia con el id=" + id
         });
       });
   };
@@ -116,12 +116,12 @@ export const deleteAllAlergias = (req, res) => {
       truncate: false
     })
       .then(nums => {
-        res.send({ message: `${nums} Tutorials were deleted successfully!` });
+        res.send({ message: `${nums} alergias fueron borradas!` });
       })
       .catch(err => {
         res.status(500).send({
           message:
-            err.message || "Some error occurred while removing all tutorials."
+            err.message || "ocurrio un error al borrar las alergias."
         });
       });
   };

@@ -1,6 +1,11 @@
 export const conf = {
-  host: "MILAPTOP\\LAPTOPSQL",
-  port: "61894" ,
+  // host: "MILAPTOP\\LAPTOPSQL",
+  // port: "61894" ,
+  // user: "gerson",
+  // password: "nexopower",
+  // db: "clinica",
+  host: "MIPC\\LAPTOP_1TB",
+  port: "53455" ,
   user: "gerson",
   password: "nexopower",
   db: "clinica",
